@@ -1,14 +1,14 @@
-Identifiers
+Identifiers:
 
+Name: subject
+Data type: integer 
+Content: The ID of the test subject
+Value Range: 1 - 30
 
-subject - integer - The ID of the test subject
-
-1 - 30
-
-
-
-activity - string - The type of activity that they were performing when the measurements were taken
-
+Name: activity
+Data type: string 
+Content: The type of activity that they were performing when the measurements were taken
+Value Range:
 Walking
 Walking Upstairs
 Walking Downstairs
@@ -16,12 +16,11 @@ Sitting
 Standing
 Laying
 
+Measurements:
 
-
-
-Measurements
-These variables are all of the mean values for the corresponding measurement based on the subject and the activity.  These are all of data type numeric.
-
+Content: the mean values for the corresponding measurement based on the subject and the activity
+Data type: numeric
+Measurements Labels:
 tBodyAccmeanX
 tBodyAccmeanY
 tBodyAccmeanZ
