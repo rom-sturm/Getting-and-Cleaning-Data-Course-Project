@@ -9,14 +9,14 @@ Via Opera Pia 11A, I-16145, Genoa, Italy. activityrecognition@smartlab.ws www.sm
 
 Repository
 
-This repository contains 3 main files:
+This repository contains 3 further files:
 run_analysis.R - the script to create the tidy dataset
 tidy.txt - the tidy dataset itself
-CodeBook.md - description of the Variables and measures of the tidy dataset
+CodeBook - description of the Variables and measures of the tidy dataset
 
 
 Transformations
-The run_analysis.R script should be run on the [data] (https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip) 
+The run_analysis.R script should be run on the data (https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip) 
 and it will complete the following steps to transform the data into a tidy dataset.
 
 1. Merges the training and the test sets to create one data set.
