@@ -52,8 +52,10 @@ data_comp <- cbind(data.subjects, data.activities, data.data)
 features <- read.table(file.path(targetFolder, 'features.txt'))
 requiredFeatures <- features[grep('-(mean|std)\\(\\)', features[, 2 ]), 1]
 
+#filter dataset
 data_comp1 <- data_comp[requiredFeatures, ]
 
+#get labels
 ac_label <- read.table(file.path(targetFolder, 'activity_labels.txt'))
 
 # Update the activity name
@@ -63,7 +65,11 @@ colnames(data_comp1) <- c('subject', 'activity',
   gsub('\\-|\\(|\\)', '', as.character(requiredFeatures)))
   
 data_comp1[, 2] <- as.character(data_comp1[, 2])
+
+#final structure
 final.dataset <- melt(data_comp1, id = c('subject', 'activity'))
 final.dataset_mean <- reshape2::dcast(final.dataset, subject + activity ~ variable, mean)
+
+#write file
 write.table(final.dataset_mean, file=file.path("tidy.txt"), 
             row.names = FALSE, quote = FALSE )
